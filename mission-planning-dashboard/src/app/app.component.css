@@ -1,0 +1,16 @@
+.box {
+    display: flex;
+    padding: 10px;
+}
+
+.payload {
+    border: 1px solid black;
+    flex: auto;
+    background-color: lightgreen;
+}
+
+app-header {
+    text-align: center;
+    font-size: 30px;
+    color: darkblue;
+}
