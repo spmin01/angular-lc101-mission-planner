@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+.payloadHeading {
+    text-decoration: underline;
+    color: purple;
+    text-align: center;
+    font-size: 25px
+}
+
+body {
+    background: rgb(61, 139, 103);
+}
