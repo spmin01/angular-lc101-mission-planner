@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CrewComponent implements OnInit {
 
   crew: object[] = [
-    {name: "Eileen Collins", firstMission: false},
-    {name: "Mae Jemison", firstMission: false},
-    {name: "Ellen Ochoa", firstMission: true}
+    { name: "Eileen Collins", firstMission: false },
+    { name: "Mae Jemison", firstMission: false },
+    { name: "Ellen Ochoa", firstMission: true }
   ];
   memberBeingEdited: object = null;
 
@@ -23,8 +23,11 @@ export class CrewComponent implements OnInit {
     let newCrew: object = {
       name: name,
       firstMission: firstMission
+    };
+
+    if (newCrew['name'] !== '' && !this.crew.some(crew => crew['name'] === newCrew['name'])) {
+      this.crew.push(newCrew);
     }
-    this.crew.push(newCrew);
   }
 
   removeCrew(crewMember: object): void {
